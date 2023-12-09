@@ -1,0 +1,10 @@
+services:
+  comment-db:
+    image: mysql:8.0.33-debian
+  expose:
+    - 3306
+  env_file:
+    - ./comment-db/.env.local
+  restart: always
+  volumes:
+    - ./comment-db/sql:/docker-entrypoint-initdb.d
