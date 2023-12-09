@@ -1,0 +1,9 @@
+FROM node:20-alpine3.17 
+
+WORKDIR /opt/app
+
+COPY public public
+COPY package.json .
+COPY next.config.js .
+
+ENTRYPOINT [ "npm", "start" ]

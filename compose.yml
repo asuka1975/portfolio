@@ -1,10 +1,35 @@
 services:
   comment-db:
     image: mysql:8.0.33-debian
-  expose:
-    - 3306
-  env_file:
-    - ./comment-db/.env.local
-  restart: always
-  volumes:
-    - ./comment-db/sql:/docker-entrypoint-initdb.d
+    expose:
+      - 3306
+    env_file:
+      - ./comment-db/.env.local
+    restart: always
+    volumes:
+      - ./comment-db/sql:/docker-entrypoint-initdb.d
+
+  frontend-builder:
+    build:
+      context: portfolio-frontend
+      dockerfile: Dockerfile-builder
+    volumes:
+      - next:/opt/src/.next
+      - node_modules:/opt/src/node_modules
+    
+  frontend-runner:
+    build:
+      context: portfolio-frontend
+      dockerfile: Dockerfile-runner
+    ports:
+      - 8089:3000
+    volumes:
+      - next:/opt/app/.next
+      - node_modules:/opt/app/node_modules
+    depends_on:
+      frontend-builder:
+        condition: service_completed_successfully
+
+volumes:
+  next:
+  node_modules:
