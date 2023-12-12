@@ -1,6 +1,7 @@
 import Image from "next/image"
 import MenuButton from "../atom/MenuButton"
 import Subtext from "../atom/Subtext"
+import Link from "next/link"
 
 type Props = {
 
@@ -16,8 +17,11 @@ export default function Header({}: Props) {
             </div>
             <div>
                 <MenuButton className="peer w-8 h-8" />
-                <div className="absolute bg-color5 bottom-0 left-0 w-screen h-0 peer-active:h-[calc(100vh-30px-6em)] transition-all duration-500">
-
+                <div className="absolute bg-color5 bottom-0 left-0 w-screen h-0 peer-active:h-[calc(100vh-30px-6em)] peer-aria-[toggled=true]:h-[calc(100vh-30px-6em)] transition-all duration-500">
+                    <div className="flex flex-col items-center gap-12 px-4 py-8">
+                        <Link href="/" className="text-color4 text-6xl">about</Link>
+                        <Link href="/" className="text-color4 text-6xl">blog</Link>
+                    </div>
                 </div>
             </div>
         </header>
