@@ -16,7 +16,7 @@ export default function Header({}: Props) {
             </div>
             <div>
                 <MenuButton className="peer w-8 h-8" />
-                <div className="absolute bg-color5 bottom-0 left-0 w-screen h-0 peer-active:h-[87%] transition-all duration-500">
+                <div className="absolute bg-color5 bottom-0 left-0 w-screen h-0 peer-active:h-[calc(100vh-30px-6em)] transition-all duration-500">
 
                 </div>
             </div>
