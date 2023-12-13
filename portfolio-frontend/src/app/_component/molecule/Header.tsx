@@ -19,10 +19,11 @@ export default function Header({}: Props) {
                 <MenuButton className="peer w-8 h-8" />
                 <div className="absolute overflow-hidden bg-color5 bottom-0 left-0 w-screen h-0 peer-active:h-[calc(100vh-30px-6em)] peer-aria-[toggled=true]:h-[calc(100vh-30px-6em)] transition-all duration-500">
                     <div className="flex flex-col gap-12 px-[25%] py-8">
-                        <Link href="/" className="text-color4 text-6xl">about</Link>
-                        <Link href="/" className="text-color4 text-6xl">work</Link>
-                        <Link href="/" className="text-color4 text-6xl">blog</Link>
-                        <Link href="/" className="text-color4 text-6xl">contact</Link>
+                        <div className="block py-8"><Link href="/" className="absolute text-color4 text-6xl hover:text-7xl transition-all duration-300">HOME</Link></div>
+                        <div className="block py-8"><Link href="/" className="absolute text-color4 text-6xl hover:text-7xl transition-all duration-300">ABOUT</Link></div>
+                        <div className="block py-8"><Link href="/" className="absolute text-color4 text-6xl hover:text-7xl transition-all duration-300">WORK</Link></div>
+                        <div className="block py-8"><Link href="/" className="absolute text-color4 text-6xl hover:text-7xl transition-all duration-300">BLOG</Link></div>
+                        <div className="block py-8"><Link href="/" className="absolute text-color4 text-6xl hover:text-7xl transition-all duration-300">CONTACT</Link></div>
                     </div>
                 </div>
             </div>
