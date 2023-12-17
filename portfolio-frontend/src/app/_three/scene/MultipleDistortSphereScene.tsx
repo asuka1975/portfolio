@@ -6,7 +6,11 @@ import DistortSphere from '@/app/_three/model/DistortSphere';
 import Rig from '@/app/_three/action/Rig';
 import { useMemo } from 'react';
 
-export default function BackgroundAnimation() {
+type Props = {
+    parent: any
+}
+
+export default function BackgroundAnimation({ parent }: Props) {
     const spheres = useMemo(() => [
         [-2, -1, -5],
         [100, 0, -120],
@@ -14,9 +18,9 @@ export default function BackgroundAnimation() {
         [30, 30, -80],
         [20, -8, -20]
     ], [])
-    
+
     return (
-        <Canvas>
+        <Canvas gl={{ antialias: true }} eventSource={parent}>
             <ambientLight />
             <fog attach="fog" color={"#F2F2F2"} near={1} far={220} />
             <pointLight position={[10, 10, 10]} />
