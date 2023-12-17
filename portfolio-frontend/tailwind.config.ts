@@ -11,6 +11,28 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        "scroll-indicator": "scroll-indicator 1s infinite"
+      },
+      keyframes: {
+        "scroll-indicator": {
+          "0%": {
+            top: "-6rem",
+            "background-color": "color5"
+          },
+          "50%": {
+            top: "7rem",
+            opacity: 1,
+          },
+          "60%": {
+            opacity: 0,
+          },
+          "100%": {
+            top: "-6rem",
+            opacity: 0,
+          },
+        }
+      }
     },
     colors: {
       'color1': '#F2E9D8',
