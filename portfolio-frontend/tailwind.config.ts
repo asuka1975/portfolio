@@ -22,14 +22,14 @@ const config: Config = {
           },
           "50%": {
             top: "7rem",
-            opacity: 1,
+            opacity: "1",
           },
           "60%": {
-            opacity: 0,
+            opacity: "0",
           },
           "100%": {
             top: "-6rem",
-            opacity: 0,
+            opacity: "0",
           },
         }
       }
