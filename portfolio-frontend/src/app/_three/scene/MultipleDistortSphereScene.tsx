@@ -35,7 +35,7 @@ export default function BackgroundAnimation({ parent }: Props) {
                 height={480}
                 />
                 <Noise opacity={0.02} />
-                <Vignette eskil={false} offset={0.1} darkness={0.3} />
+                <Vignette eskil={false} offset={0.1} darkness={0.55} />
             </EffectComposer>
         </Canvas>
     )
