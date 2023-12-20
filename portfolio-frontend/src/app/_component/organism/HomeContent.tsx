@@ -1,3 +1,4 @@
+import Heading from "../atom/Heading"
 import PageUnit from "../atom/PageUnit"
 import ScrollIndicator from "../atom/ScrollIndicator"
 
@@ -21,13 +22,12 @@ export default function HomeContent({}: Props) {
                     <ScrollIndicator />
                 </div>
             </PageUnit>
-            <PageUnit className="flex flex-col gap-12 pt-[10%] px-[20%]">
+            <PageUnit className="flex flex-col gap-12 pt-[5%] px-[20%]">
                 <div className="grid grid-cols-2">
                     <div>
-
+                        <Heading title="ABOUT" />
                     </div>
                     <div>
-                        
                     </div>
                 </div>
             </PageUnit>
