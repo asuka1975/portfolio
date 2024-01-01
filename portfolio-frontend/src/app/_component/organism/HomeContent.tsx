@@ -1,6 +1,7 @@
 import Heading from "../atom/Heading"
 import PageUnit from "../atom/PageUnit"
 import ScrollIndicator from "../atom/ScrollIndicator"
+import TimelineTick from "../atom/TimelineTick"
 
 type Props = {
 
@@ -30,6 +31,7 @@ export default function HomeContent({}: Props) {
                         <Heading title="ABOUT" />
                     </div>
                     <div>
+                        <TimelineTick />
                     </div>
                 </div>
             </PageUnit>
